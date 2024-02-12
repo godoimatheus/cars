@@ -258,6 +258,8 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
+.idea/vcs.xml
+
 # Sonarlint plugin
 # https://plugins.jetbrains.com/plugin/7973-sonarlint
 .idea/**/sonarlint/
