@@ -6,6 +6,7 @@ from cars.models import Brand, Car
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+    ordering = ('name',)
 
 
 class CarAdmin(admin.ModelAdmin):
