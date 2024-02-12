@@ -8,7 +8,7 @@ disable=
       C0115, # missing-class-docstring
       C0415, # import-outside-toplevel
       C0103, # invalid-name
-
+      E1101, # no-member
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
