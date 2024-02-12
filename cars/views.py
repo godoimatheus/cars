@@ -4,7 +4,7 @@ from cars.models import Car
 
 
 def cars_view(request):
-    cars = Car.objects.all().order_by('model')
+    cars = Car.objects.all().order_by('-id')
     search = request.GET.get('search')
     if search:
         cars = Car.objects.filter(model__icontains=search)
