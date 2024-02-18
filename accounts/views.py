@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.shortcuts import redirect, render
 
@@ -36,3 +36,8 @@ def login_view(request):
         template_name='login.html',
         context={'login_form': login_form},
     )
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('cars_list')
