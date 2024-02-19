@@ -4,11 +4,11 @@ from django.contrib import admin
 from django.urls import path
 
 from accounts.views import login_view, logout_view, register_view
-from cars.views import cars_view, new_car_view
+from cars.views import CarsView, new_car_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cars/', cars_view, name='cars_list'),
+    path('cars/', CarsView.as_view(), name='cars_list'),
     path('login', login_view, name='login'),
     path('logout', logout_view, name='logout'),
     path('new-car/', new_car_view, name='new_car'),
