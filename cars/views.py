@@ -1,4 +1,10 @@
-from django.views.generic import CreateView, DetailView, ListView, UpdateView
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    DetailView,
+    ListView,
+    UpdateView,
+)
 
 from cars.forms import CarForm
 from cars.models import Car
@@ -33,4 +39,10 @@ class CarUpdateView(UpdateView):
     model = Car
     form_class = CarForm
     template_name = 'car_update.html'
+    success_url = '/cars/'
+
+
+class CarDeleteView(DeleteView):
+    model = Car
+    template_name = 'car_delete.html'
     success_url = '/cars/'
