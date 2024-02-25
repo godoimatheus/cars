@@ -12,6 +12,7 @@ repos:
       - id: isort
         language_version: python3.10
         stages: [ commit ]
+        args: ["--profile", "black", "--filter-files"]
   - repo: https://github.com/grantjenks/blue
     rev: v0.9.1
     hooks:
